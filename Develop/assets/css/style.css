@@ -13,10 +13,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .header h1 {
-    display: inline-block;
     font-size: 48px;
 }
 
@@ -27,17 +29,18 @@ body {
 .header div {
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
 
 .header div ul {
     list-style-type: none;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
 .header div ul li {
-    display: inline-block;
     margin-left: 25px;
 }
 
@@ -58,28 +61,47 @@ p {
     background-size: cover;
     background-position: center;
 }
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
 .content {
     width: 75%;
-    display: inline-block;
-    margin-left: 20px;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
 }
+
+.content p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-left: 2%;
+}
+
+.content h2 {
+    margin-left: 2%;
+}
+.flex-left {
+    flex: 1;
+    align-self: flex-start;
+}
+
+.flex-right {
+    flex: 1;
+    align-self: flex-end;
+}
+
 
 .benefits {
     margin-right: 20px;
     padding: 20px;
-    clear: both;
-    float: right;
     width: 20%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -117,26 +139,31 @@ p {
 }
 
 .benefit-lead img {
-    display: block;
+    display: flex;
     margin: 10px auto;
     max-width: 150px;
 }
 
 .benefit-brand img {
-    display: block;
+    display: flex;
     margin: 10px auto;
     max-width: 150px;
 }
 
 .benefit-cost img {
-    display: block;
+    display: flex;
     margin: 10px auto;
     max-width: 150px;
 }
 
 .search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    flex: 1 1 auto;
+    margin-bottom: 2%;
+    padding: 3%;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -144,8 +171,12 @@ p {
 }
 
 .online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-bottom: 2%;
+    padding: 3%;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -153,8 +184,12 @@ p {
 }
 
 .social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    margin-bottom: 2%;
+    padding: 3%;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #0072bb;
@@ -176,6 +211,7 @@ p {
 .search-engine-optimization h2 {
     margin-bottom: 20px;
     font-size: 36px;
+    display: flex;
 }
 
 .online-reputation-management h2 {
